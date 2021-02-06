@@ -3,6 +3,9 @@ State-of-the-art cryptography to protect your world seed against seed cracking t
 
 This mod is written for the Fabric Mod Loader. If you have advanced knowledge on coding Spigot plugins, help with porting this to Spigot would be greatly appreciated.
 
+## Discord
+https://discord.gg/Jg7Bun7
+
 ## Installation
 1. Download and run the [Fabric installer](https://fabricmc.net/use).
     - Click "download installer".
