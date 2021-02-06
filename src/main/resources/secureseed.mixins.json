@@ -1,0 +1,42 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.earthcomputer.secureseed.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "GeneratorOptionsAccessor",
+    "MixinAbstractNetherSurfaceBuilder",
+    "MixinBadlandsSurfaceBuilder",
+    "MixinBiome",
+    "MixinCachingLayerContext",
+    "MixinCarver",
+    "MixinCaveCarver",
+    "MixinChunkGenerator",
+    "MixinChunkRandom",
+    "MixinChunkStatus",
+    "MixinEndBiomeSource",
+    "MixinEnderDragonFight",
+    "MixinEndSpikeFeature",
+    "MixinGeneratorOptions",
+    "MixinMinecraftServer",
+    "MixinMultiNoiseBiomeSource",
+    "MixinNoiseChunkGenerator",
+    "MixinOctavePerlinNoiseSampler",
+    "MixinOctaveSimplexNoiseSampler",
+    "MixinPillagerOutpostFeature",
+    "MixinRavineCarver",
+    "MixinSeedCommand",
+    "MixinServerChunkManager",
+    "MixinSlimeEntity",
+    "MixinSurfaceBuilders",
+    "MixinServerWorld",
+    "MixinWorldChunk"
+  ],
+  "client": [
+    "MixinCreateWorldScreen",
+    "MixinMoreOptionsDialog"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

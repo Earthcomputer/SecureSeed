@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "secureseed",
+  "version": "${version}",
+  "name": "SecureSeed",
+  "description": "State-of-the-art cryptography to protect your world seed against seed cracking tools",
+  "authors": [
+    "Earthcomputer"
+  ],
+  "contact": {
+    "website": "https://earthcomputer.net",
+    "repo": "https://github.com/Earthcomputer/SecureSeed"
+  },
+  "license": "MIT",
+  "icon": "assets/secureseed/icon.png",
+  "environment": "*",
+  "entrypoints": {},
+  "mixins": [
+    "secureseed.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.1"
+  }
+}
