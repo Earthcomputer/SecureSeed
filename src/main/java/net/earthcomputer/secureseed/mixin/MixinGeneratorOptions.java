@@ -41,18 +41,17 @@ public class MixinGeneratorOptions implements IGeneratorOptions {
     @Override
     public void secureseed_setSeed(long[] seed) {
         this.secureSeed = seed;
-        this.seed = seed[0];
+        if (seed != null) this.seed = seed[0];
     }
 
-    @SuppressWarnings("UnresolvedMixinReference")
-    @Inject(method = "*()Lnet/minecraft/world/gen/GeneratorOptions;", at = @At("RETURN"))
-    private void onCloneGeneratorOptions(CallbackInfoReturnable<GeneratorOptions> ci) {
+    @Inject(method = {"withBonusChest", "toggleGenerateStructures", "toggleBonusChest"}, at = @At("RETURN"))
+    private void onCloneGeneratorOptions1(CallbackInfoReturnable<GeneratorOptions> ci) {
         ((IGeneratorOptions) ci.getReturnValue()).secureseed_setSeed(secureSeed);
     }
 
-    @SuppressWarnings({"UnresolvedMixinReference", "unchecked"})
+    @SuppressWarnings({"UnresolvedMixinReference", "unchecked", "target"})
     @Redirect(method = "method_28606(Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;",
-            at = @At(value = "INVOKE", target = "Lcom/mojang/datafixers/Products$P5;apply(Lcom/mojang/datafixers/kinds/Applicative;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/kinds/App;"))
+            at = @At(value = "INVOKE", target = "Lcom/mojang/datafixers/Products$P5;apply(Lcom/mojang/datafixers/kinds/Applicative;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/kinds/App;", remap = false))
     private static <T1, T2, T3, T4, T5, R> App<RecordCodecBuilder.Mu<GeneratorOptions>, R> redirectApply(
             Products.P5<RecordCodecBuilder.Mu<GeneratorOptions>, T1, T2, T3, T4, T5> product, Applicative<RecordCodecBuilder.Mu<GeneratorOptions>, ?> instance,
             App<RecordCodecBuilder.Mu<GeneratorOptions>, Function5<T1, T2, T3, T4, T5, R>> function

@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Mixin(GeneratorOptions.class)
 public interface GeneratorOptionsAccessor {
-    @Invoker
+    @Invoker("<init>")
     static GeneratorOptions createGeneratorOptions(long seed, boolean generateStructures, boolean bonusChest,
                                                    SimpleRegistry<DimensionOptions> simpleRegistry,
                                                    Optional<String> legacyCustomOptions) {

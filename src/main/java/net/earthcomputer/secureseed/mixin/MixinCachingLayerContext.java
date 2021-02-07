@@ -35,6 +35,7 @@ public class MixinCachingLayerContext {
 
     /**
      * @author Earthcomputer
+     * @reason Very different
      */
     @Overwrite
     public void initSeed(long x, long y) {
@@ -43,6 +44,7 @@ public class MixinCachingLayerContext {
 
     /**
      * @author Earthcomputer
+     * @reason Very different
      */
     @Overwrite
     public int nextInt(int bound) {

@@ -125,6 +125,7 @@ public class MixinChunkRandom extends Random implements IChunkRandom {
 
     /**
      * @author Earthcomputer
+     * @reason Very different
      */
     @Overwrite
     public void consume(int count) {
@@ -179,6 +180,7 @@ public class MixinChunkRandom extends Random implements IChunkRandom {
 
     /**
      * @author Earthcomputer
+     * @reason Very different
      */
     @Overwrite
     public long setTerrainSeed(int chunkX, int chunkZ) {
@@ -188,6 +190,7 @@ public class MixinChunkRandom extends Random implements IChunkRandom {
 
     /**
      * @author Earthcomputer
+     * @reason Very different
      */
     @Overwrite
     public long setPopulationSeed(long worldSeed, int blockX, int blockZ) {
@@ -197,6 +200,7 @@ public class MixinChunkRandom extends Random implements IChunkRandom {
 
     /**
      * @author Earthcomputer
+     * @reason Very different
      */
     @Overwrite
     public long setDecoratorSeed(long populationSeed, int index, int step) {
@@ -206,6 +210,7 @@ public class MixinChunkRandom extends Random implements IChunkRandom {
 
     /**
      * @author Earthcomputer
+     * @reason Very different
      */
     @Overwrite
     public long setCarverSeed(long worldSeed, int chunkX, int chunkZ) {
@@ -215,6 +220,7 @@ public class MixinChunkRandom extends Random implements IChunkRandom {
 
     /**
      * @author Earthcomputer
+     * @reason Very different
      */
     @Overwrite
     public long setRegionSeed(long worldSeed, int regionX, int regionZ, int salt) {
@@ -224,6 +230,7 @@ public class MixinChunkRandom extends Random implements IChunkRandom {
 
     /**
      * @author Earthcomputer
+     * @reason Very different
      */
     @Overwrite
     public static Random getSlimeRandom(int chunkX, int chunkZ, long worldSeed, long scrambler) {

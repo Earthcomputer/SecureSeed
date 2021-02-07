@@ -20,8 +20,9 @@ public class MixinSeedCommand {
 
     /**
      * @author Earthcomputer
+     * @reason Very different
      */
-    @SuppressWarnings("OverwriteTarget")
+    @SuppressWarnings({"OverwriteTarget", "target"})
     @Overwrite
     private static int method_13617(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
         Globals.setupGlobals(context.getSource().getWorld());
